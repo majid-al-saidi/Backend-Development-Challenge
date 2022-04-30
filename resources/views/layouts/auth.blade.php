@@ -22,7 +22,7 @@
 </head>
 
 <body class="text-blueGray-700 bg-blueGray-800 antialiased">
-    <main>
+    <main class=" overflow-hidden ">
         @yield('content')
     </main>
 </body>
