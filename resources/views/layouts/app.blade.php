@@ -19,6 +19,8 @@
     }
 
 </style>
+@livewireStyles
+        @stack('styles')
 
 
 <body class="text-blueGray-700 antialiased">
@@ -26,6 +28,24 @@
     <main>
         @yield('content')
     </main>
+
+    <form id="logoutform" action="{{ route('logout') }}" method="POST" style="display: none;">
+        {{ csrf_field() }}
+    </form>
+    <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+    @livewireScripts
+        @yield('scripts')
+        @stack('scripts')
+        <script>
+            function closeAlert(event){
+        let element = event.target;
+        while(element.nodeName !== "BUTTON"){
+          element = element.parentNode;
+        }
+        element.parentNode.parentNode.removeChild(element.parentNode);
+      }
+        </script>
 </body>
 
 </html>
