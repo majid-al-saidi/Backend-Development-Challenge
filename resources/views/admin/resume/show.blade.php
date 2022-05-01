@@ -6,7 +6,7 @@
             <div>
                 <center>
                     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-                    <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_4DLPlW.json" background="transparent"
+                    <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_lqge6px5.json" background="transparent"
                         speed="1" style="width: 200px; height: 200px;" loop autoplay></lottie-player>
                 </center>
             </div>
