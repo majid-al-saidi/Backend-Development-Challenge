@@ -1,23 +1,26 @@
-@extends('layouts.admin')
+@extends('layouts.app')
 @section('content')
-<div class="row">
-    <div class="card bg-white">
-        <div class="card-header border-b border-blueGray-200">
-            <div class="card-header-container">
-                <h6 class="card-title">
-                    {{ trans('cruds.job.title_singular') }}
+    <div class="w-full">
+        <div class="px-10 bg-white">
+            <div class="flex">
+                <div class="w-1/2">
+                    <h3 class=" py-6 text-2xl text-gray-900 font-bold md:text-4xl">
+                        {{ trans('cruds.job.title_singular') }}
                     {{ trans('global.list') }}
-                </h6>
-
-                @can('job_create')
+                    </h3>
+                </div>
+                <div class="w-1/2">
+                    <div class="float-right py-6">
+                        @can('job_create')
                     <a class="btn btn-indigo" href="{{ route('admin.jobs.create') }}">
                         {{ trans('global.add') }} {{ trans('cruds.job.title_singular') }}
                     </a>
                 @endcan
+                    </div>
+                </div>
             </div>
-        </div>
-        @livewire('job.index')
+            @livewire('job.index')
 
+        </div>
     </div>
-</div>
 @endsection
