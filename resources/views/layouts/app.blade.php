@@ -23,7 +23,7 @@
         @stack('styles')
 
 
-<body class="text-blueGray-700 antialiased">
+<body class="text-blueGray-700 antialiased overflow-x-hidden	">
     <x-app-nav/>
     <main>
         @yield('content')

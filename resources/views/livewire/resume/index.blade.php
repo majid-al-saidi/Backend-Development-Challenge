@@ -26,7 +26,7 @@
         </div>
         <div class="w-full sm:w-1/2 sm:text-right">
             Search:
-            <input type="text" wire:model.debounce.300ms="search" class="w-20 border-none bg-gray-100 rounded-full text-center shadow-sm hover:bg-blue-100" />
+            <input type="text" wire:model.debounce.300ms="search" class=" border-none bg-gray-100 rounded-full text-center shadow-sm hover:bg-blue-100" />
         </div>
     </div>
     <div wire:loading.delay>
