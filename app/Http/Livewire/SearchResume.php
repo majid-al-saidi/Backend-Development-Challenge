@@ -11,15 +11,16 @@ class SearchResume extends Component
     public $wordtwo;
     public $wordthree;
     public $wordfour;
+    public $wordfive;
 
     public $resume;
 
-    public $count = 4;
+    public $count = 5;
 
     //results:
-    public $matchesone, $matchestwo, $matchesthree, $matchesfour;
+    public $matchesone, $matchestwo, $matchesthree, $matchesfour, $matchesfive;
     //errors:
-    public $errorone, $errortwo, $errorthree, $errorfour;
+    public $errorone, $errortwo, $errorthree, $errorfour, $errorfive;
 
     public function render()
     {
@@ -60,6 +61,14 @@ class SearchResume extends Component
                 $this->matchesfour = $this->findMatches($this->wordfour);
             }
         }
+        if ($this->wordfive != null) {
+            if ($this->wordsNumber($this->wordfive) > 1) {
+                $this->errorfive = "Only One Word";
+            } else {
+                $this->errorone = "";
+                $this->matchesfive = $this->findMatches($this->wordfive);
+            }
+        }
     }
 
     public function mount($resume)
@@ -68,18 +77,18 @@ class SearchResume extends Component
     }
 
 
-    public function updatedwordone($value)
-    {
-    }
-    public function updatedwordtwo($value)
-    {
-    }
-    public function updatedwordthree($value)
-    {
-    }
-    public function updatedwordfour($value)
-    {
-    }
+    // public function updatedwordone($value)
+    // {
+    // }
+    // public function updatedwordtwo($value)
+    // {
+    // }
+    // public function updatedwordthree($value)
+    // {
+    // }
+    // public function updatedwordfour($value)
+    // {
+    // }
 
     public function findMatches($word)
     {
