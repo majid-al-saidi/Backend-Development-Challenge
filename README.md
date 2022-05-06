@@ -1,5 +1,7 @@
 # [Codestacker Challenges] Backend Development challenge
 
+[DEMO](https://drive.google.com/file/d/1ek_IebEIJ71k1mWbK0pxVED54dSHKefe/view?usp=drivesdk)
+
 This project is minted to help HR managers to search within the resumes easily to find any information that they seek.
 
 ## Installation
